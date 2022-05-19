@@ -1,3 +1,15 @@
+> #
+
+![fex-cl-1](https://user-images.githubusercontent.com/15264325/169299996-eccc735e-8295-4ea5-9539-3bc25b9955a0.png)
+
+![fex-cl-2](https://user-images.githubusercontent.com/15264325/169300032-edf82c4c-849f-4883-b6be-15941e927ea7.png)
+
+![fex-cl-3](https://user-images.githubusercontent.com/15264325/169300068-dba36fa7-e287-42a5-b109-a3043b2a9aab.png)
+
+![fex-cl-4](https://user-images.githubusercontent.com/15264325/169300088-b71a7151-36cc-4429-8a96-7716cd4ede0c.png)
+
+> #
+
 ## The Rewrite Challenge
 This is a simulation of a real-life task that you might (or might not) experience as a professional developer.
 
