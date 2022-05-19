@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 const App = () => {
   return (
@@ -7,4 +8,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
