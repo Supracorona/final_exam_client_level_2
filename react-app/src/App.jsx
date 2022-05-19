@@ -5,7 +5,6 @@ import CoursesView from "./components/CoursesView";
 import Courses from "./modules/Courses";
 
 const App = () => {
-
   const dispatch = useDispatch();
 
   const fetchCourses = async () => {
@@ -15,11 +14,13 @@ const App = () => {
 
   useEffect(() => {
     fetchCourses();
-  }, [])
-  
+  });
+
   return (
     <div className="container">
-      <h1 data-cy="course-list-header" className="center" onClick={fetchCourses}><span>COURSE LIST</span></h1>
+      <h1 data-cy="course-list-header" className="center" onClick={fetchCourses}>
+        <span>COURSE LIST</span>
+      </h1>
       <CourseSections />
       <CoursesView />
     </div>

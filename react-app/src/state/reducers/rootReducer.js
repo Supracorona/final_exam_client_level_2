@@ -5,8 +5,8 @@ const rootReducer = (state, action) => {
         ...state,
         coursesList: action.payload
       };
-      default:
-        return state;
+    default:
+      return state;
   }
 };
 

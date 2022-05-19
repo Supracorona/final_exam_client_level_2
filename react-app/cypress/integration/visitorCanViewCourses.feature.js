@@ -1,28 +1,28 @@
-describe('Visitor can visit application and see all courses', () => {
-  
+describe("A visitor visiting the application", () => {
+
 
 
   before(() => {
-    cy.intercept("GET", "**/data/courses.json", {fixture: "courseListResponse.json"}).as("coursesList");
+    cy.intercept("GET", "**/data/courses.json", {fixture: "coursesListResponse.json"}).as("coursesList");
     cy.visit("/");
   });
 
 
 
-  it("is expected to receive collection of courses", () => {
-    cy.wait("@coursesList").its("response.body").should("be.an", "array").and("have.lenght", 7);
+  it("is expected to receive a collection of x courses", () => {
+    cy.wait("@coursesList").its("response.body").should("be.an", "array").and("have.length", 7);
   });
 
 
 
-  it("is expected to see header", () => {
+  it("is expected to see main header", () => {
     cy.get("[data-cy=course-list-header]").should("contain.text", "COURSE LIST");
   });
 
 
 
-  describe('Visitor can see navigation with course section names', () => {
-
+  describe("can see navigations with course section names", () => {
+  
     it("is expected to see Workshops navigation", () => {
       cy.get("[data-cy=workshops-navigation]").should("contain.text", "Workshops");
     });
@@ -46,14 +46,14 @@ describe('Visitor can visit application and see all courses', () => {
     it("is expected to see React navigation", () => {
       cy.get("[data-cy=react-navigation]").should("contain.text", "React");
     });
-
+  
   });
 
 
 
-  describe('Visitor can see first two courses present', () => {
+  describe("can see first 2 courses available", () => {
     
-    it("is expected to see Work The Web course section", () => {
+    it("is expected to see Work the Web course section", () => {
       cy.get("[data-cy=course-section-1]").within(() => {
         cy.get("[data-cy=course-header-1]").should("contain.text", "Work The Web");
         cy.get("[data-cy=course-description-1]").should("be.visible");
@@ -69,12 +69,12 @@ describe('Visitor can visit application and see all courses', () => {
         cy.get("[data-cy=course-header-2]").should("contain.text", "Test Automation using Cypress");
         cy.get("[data-cy=course-description-2]").should("be.visible");
         cy.get("[data-cy=course-category-2]").should("contain.text", "Category: testing");
-        cy.get("[data-cy=course-instructors-2]").should("contain.text", "Instructors: Thomas Ochman, Emma-Maria Thalé");
+        cy.get("[data-cy=course-instructors-2]").should("contain.text", "Instructors: Thomas Ochman, Emma-Maria Thalén");
         cy.get("[data-cy=course-info-2]").should("be.visible");
         cy.get("[data-cy=course-price-2]").should("contain.text", "Price: 24 500 SEK - €2.450");
       });
     });
-
+  
   });
 
 
